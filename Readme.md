@@ -1,1 +1,1 @@
-Enjoy
+This repository contains a simple and efficient backend layer design for an Employee Management System. The main purpose of this backend layer is to manage employee data, including adding, updating, and retrieving employee records, along with other related features. The backend is designed using RESTful API best practices and can be easily integrated into any frontend application or other services.
