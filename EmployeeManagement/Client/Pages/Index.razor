@@ -1,0 +1,45 @@
+﻿@page "/home"
+@using EmployeeManagement.Shared;
+@inject NavigationManager _nav
+@inject IJSRuntime JSRuntime
+<AuthorizeView Policy="Guest">
+    <Authorized>
+        <PageTitle>Home</PageTitle>
+        <table id="defaultTable" class="display">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>First Name</th>
+                    <th>Date Of Joining</th>
+                    <th>Date Of Birth</th>
+                    <th>Department</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (RegisterModel r in dataSource)
+                {
+                    <tr>
+                        <td>@r.Name </td>
+                        <td>@r.Email </td>
+                        <td>@r.FirstName </td>
+                        <td>@r.DateOfJoining </td>
+                        <td>@r.DateOfBirth </td>
+                        <td>@r.Department </td>
+
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+
+
+    </Authorized>
+    <NotAuthorized>
+        @{
+            _nav.NavigateTo("/");
+        }
+
+    </NotAuthorized>
+
+</AuthorizeView>
