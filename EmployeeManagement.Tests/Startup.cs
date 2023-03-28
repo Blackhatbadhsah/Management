@@ -27,7 +27,7 @@ namespace EmployeeManagement.Tests
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<DataBaseContest>(options =>
-     options.UseSqlServer("Data Source=159.63.147.84;Initial Catalog=EmployeeManagement;User Id=EmpManage;Password=z^#X(c0489;")); //use In Memory Db Here
+     options.UseSqlServer( //use In Memory Db Here
             services.AddIdentity<User, Role>()
                 .AddUserManager<UserManager<User>>()
                 .AddRoleManager<RoleManager<Role>>()
